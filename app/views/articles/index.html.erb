@@ -10,21 +10,25 @@
   </div>
 <%end%>
 
-  <%= render "articles", articles: @articles %>
+  <%= render "articles", articles: @articles%>
 <div class="container">
+  <div class="global-trends">
   <h3>Global Trends</h3>
   <ul>
     <% @trends.each do |trend|  %>
       <li><%= trend.query%></li>
     <%end%>
   </ul>
+  </div>
 
+  <div class="search-trends">
   <h3>Your Search Trends</h3>
   <ul>
     <% @local.each do |local|%>
       <li><%= local.query %></li>
     <%end%>
   </ul>
+  </div>
 
 </div>
-<%= link_to "New article", new_article_path %>
+<%= link_to "New article", new_article_path, class: "btn-new-article" %>
