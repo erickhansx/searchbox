@@ -93,6 +93,7 @@ label {
 .articles-link {
   font-size: 2rem;
   text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .btn-new-article {
@@ -110,4 +111,10 @@ label {
   margin-bottom: 3.5rem;
   gap: 1.5rem;
   text-align: center;
+}
+
+.logged {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
 }
