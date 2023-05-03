@@ -11,6 +11,7 @@
 <%end%>
 
   <%= render "articles", articles: @articles%>
+<%= link_to "New article", new_article_path, class: "btn-new-article" %>
 <div class="container">
   <div class="global-trends">
   <h3>Global Trends</h3>
@@ -31,4 +32,3 @@
   </div>
 
 </div>
-<%= link_to "New article", new_article_path, class: "btn-new-article" %>
