@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   # GET /articles or /articles.json
   def index
     if params[:query].present?
-      if params[:query].end_with?('?')
+      if params[:query].end_with?('?') && params[:query].size > 3
         @search = Search.find_or_create_by(query: params[:query])
         @search.increment(:count)
         @search.user = current_user
